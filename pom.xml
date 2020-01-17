@@ -51,10 +51,36 @@
         <jacoco-listeners.version>3.5</jacoco-listeners.version>
 
     </properties>
+	
+	<repositories>
+             <repository>
+                    <snapshots>
+                          <enabled>false</enabled>
+                    </snapshots>
+                    <id>central</id>
+                    <name>Central Repository</name>
+                    <url>https://repo.maven.apache.org/maven2</url>
+             </repository>
+       </repositories>
+       <pluginRepositories>
+             <pluginRepository>
+                    <releases>
+                          <updatePolicy>never</updatePolicy>
+                    </releases>
+                    <snapshots>
+                          <enabled>false</enabled>
+                    </snapshots>
+                    <id>central</id>
+                    <name>Central Repository</name>
+                    <url>https://repo.maven.apache.org/maven2</url>
+             </pluginRepository>
+       </pluginRepositories>
+
 
     <dependencyManagement>
         <!-- Import the maven Spring IO Platform Bill Of Materials (BOM) -->
         <dependencies>
+		
             <dependency>
                 <groupId>io.spring.platform</groupId>
                 <artifactId>platform-bom</artifactId>
@@ -314,7 +340,6 @@
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.jacoco</groupId>
             <artifactId>org.jacoco.agent</artifactId>
